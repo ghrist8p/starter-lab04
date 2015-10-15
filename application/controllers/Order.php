@@ -36,7 +36,7 @@ class Order extends Application {
 
         $this->data['pagebody'] = 'show_menu';
         $this->data['order_num'] = $order_num;
-        //FIXME
+        
         $this->data['title'] = "Order # "
                              . $order_num
                              . ' ('
@@ -81,7 +81,7 @@ class Order extends Application {
 
     // add an item to an order
     function add($order_num, $item) {
-        //FIXME
+        $this->orders->add_item( $order_num, $item );
         redirect('/order/display_menu/' . $order_num);
     }
 
